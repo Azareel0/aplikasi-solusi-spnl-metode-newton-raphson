@@ -17,3 +17,4 @@ max_iter = st.number_input("Maksimum iterasi", value = 50, min_value = 1, max_va
 
 if st.button("Hitung"):
   hasil = x0 + y0
+  st.write("Hasil: ", hasil)
