@@ -10,3 +10,7 @@ f2 = st.text_input("Persamaan 2", placeholder = "contoh = x*y - 1")
 st.subheader("Masukkan Tebakan Awal")
 x0 = st.number_input("Tebakan awal x", value=1.0)
 y0 = st.number_input("Tebakan awal y", value=1.0)
+
+st.subheader("Masukkan Parameter")
+tol = st.number_input("Toleransi", value = 1e-6)
+max_iter = st.number_input("Maksimum iterasi", value = 50)
