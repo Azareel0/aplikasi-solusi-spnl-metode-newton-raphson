@@ -38,6 +38,7 @@ if st.button("Cek Persamaan"):
         st.error("Format persamaan salah")
 
 if st.button("Hitung Turunan Parsial"):
+    try:
         x, y = sp.symbols("x y")
         f1_sym = sp.sympify(f1)
 
@@ -46,3 +47,6 @@ if st.button("Hitung Turunan Parsial"):
 
         st.write("df1/dx =", df1_dx)
         st.write("df1/dy =", df1_dy)
+
+    except:
+        st.error("Gagal menghitung turunan")
