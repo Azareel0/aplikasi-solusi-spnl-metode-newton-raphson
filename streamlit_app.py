@@ -23,7 +23,10 @@ if st.button("Hitung Solusi"):
 
         f1_sym = sp.sympify(f1)
         f2_sym = sp.sympify(f2)
-        
+
+        st.subheader("Persamaan yang Digunakan")
+        st.write("f1 =", f1_sym)
+        st.write("f2 =", f2_sym)
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
