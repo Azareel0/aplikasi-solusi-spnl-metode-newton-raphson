@@ -38,3 +38,8 @@ if st.button("Cek Persamaan"):
         st.error("Format persamaan salah")
 
 if st.button("Hitung Turunan Parsial"):
+        x, y = sp.symbols("x y")
+        f1_sym = sp.sympify(f1)
+
+        df1_dx = sp.diff(f1_sym, x)
+        df1_dy = sp.diff(f1_sym, y)
