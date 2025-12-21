@@ -36,3 +36,5 @@ if st.button("Cek Persamaan"):
 
     except:
         st.error("Format persamaan salah")
+
+if st.button("Hitung Turunan Parsial"):
