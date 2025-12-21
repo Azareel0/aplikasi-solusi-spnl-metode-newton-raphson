@@ -43,3 +43,6 @@ if st.button("Hitung Turunan Parsial"):
 
         df1_dx = sp.diff(f1_sym, x)
         df1_dy = sp.diff(f1_sym, y)
+
+        st.write("df1/dx =", df1_dx)
+        st.write("df1/dy =", df1_dy)
