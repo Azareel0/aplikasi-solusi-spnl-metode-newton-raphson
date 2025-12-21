@@ -1,4 +1,6 @@
 import streamlit as st
+import sympy as sp
+import numpy as np
 
 st.title("Aplikasi SPNL Newton Raphson")
 st.write("Aplikasi ini digunakan untuk menyelesaikan Sistem Persamaan Non-Linear dengan menggunakan metode Newton Raphson")
@@ -19,3 +21,16 @@ if st.button("Tampilkan Input"):
   st.write("Persamaan 1: ", f1)
   st.write("Persamaan 2: ", f2)
   st.write("Tebakan awal: x = ", x0, ", y = ", y0)
+
+if st.button("Cek Persamaan"):
+    try:
+        x, y = sp.symbols('x y')
+        f1_sym = sp.sympify(f1)
+        f2_sym = sp.sympify(f2)
+
+        st.success("Persamaan valid")
+        st.write("f1 =", f1_sym)
+        st.write("f2 =", f2_sym)
+
+    except:
+        st.error("Format persamaan salah")
