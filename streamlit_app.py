@@ -14,13 +14,15 @@ x0 = st.number_input("Tebakan awal x", value=1.0)
 y0 = st.number_input("Tebakan awal y", value=1.0)
 
 st.subheader("Masukkan Parameter")
-tol = st.number_input("Toleransi", value = 1e-6, min_value = 0.0, format = "%.6f")
+tol = st.number_input("Toleransi", value = 1e-6, min_value = 0.0, format = "%.6e")
 max_iter = st.number_input("Maksimum iterasi", value = 50, min_value = 1, max_value = 1000)
 
 if st.button("Tampilkan Input"):
   st.write("Persamaan 1: ", f1)
   st.write("Persamaan 2: ", f2)
   st.write("Tebakan awal: x = ", x0, ", y = ", y0)
+  st.write("Toleransi:", tol)
+  st.write("Maksimum iterasi:", max_iter)
 
 if st.button("Cek Persamaan"):
     try:
