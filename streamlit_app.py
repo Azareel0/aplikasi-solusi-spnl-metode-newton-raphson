@@ -21,8 +21,9 @@ if st.button("Hitung Solusi"):
     try:
         x, y = sp.symbols("x y")   
 
-        st.write("x = ", x)
-        st.write("y = ", y)
+        f1_sym = sp.sympify(f1)
+        f2_sym = sp.sympify(f2)
+        
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
