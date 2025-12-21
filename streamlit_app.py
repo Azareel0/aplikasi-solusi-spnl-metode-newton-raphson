@@ -1,6 +1,4 @@
 import streamlit as st
-import sympy as sp
-import numpy as np
 
 st.title("Aplikasi SPNL Newton Raphson")
 st.write("Aplikasi ini digunakan untuk menyelesaikan Sistem Persamaan Non-Linear dengan menggunakan metode Newton Raphson")
@@ -17,7 +15,7 @@ st.subheader("Masukkan Parameter")
 tol = st.number_input("Toleransi", value = 1e-6, min_value = 0.0, format = "%.6f")
 max_iter = st.number_input("Maksimum iterasi", value = 50, min_value = 1, max_value = 1000)
 
-if st.button("Hitung"):
+if st.button("Tampilkan Input"):
   st.write("Persamaan 1: ", f1)
   st.write("Persamaan 2: ", f2)
   st.write("Tebakan awal: x = ", x0, ", y = ", y0)
