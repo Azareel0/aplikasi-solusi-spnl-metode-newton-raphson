@@ -58,7 +58,7 @@ if st.button("Hitung Solusi"):
         st.write("y ≈ ", yk)
         st.write("Error akhir = ", error)
 
-        if i == max_iter - 1:
+        if i == int(max_iter) - 1:
             st.warning("Solusi belum konvergen dalam batas iterasi maksimum")
             
     except Exception as e:
