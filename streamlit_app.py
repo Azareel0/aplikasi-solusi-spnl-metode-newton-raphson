@@ -39,6 +39,8 @@ if st.button("Hitung Solusi"):
         xk, yk = x0, y0
 
         for i in range(int(max_iter)):
+            F_val = np.array(F_func(xk, yk), dtype=float).flatten()
+            J_val = np.array(J_func(xk, yk), dtype=float)
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
