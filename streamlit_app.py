@@ -45,6 +45,10 @@ if st.button("Hitung Solusi"):
             delta = np.linalg.solve(J_val, F_val)
             xk = xk - delta[0]
             yk = yk - delta[1]
+
+            error = np.linalg.norm(delta)
+            if error < tol:
+                break
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
