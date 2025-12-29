@@ -59,6 +59,8 @@ if st.button("Hitung Solusi"):
 
         if i == max_iter - 1:
             st.warning("Solusi belum konvergen dalam batas iterasi maksimum")
-    except:
+            
+    except Exception as e:
         st.error("Terjadi kesalahan dalam perhitungan")
+        st.exception(e)
       
