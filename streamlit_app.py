@@ -34,21 +34,21 @@ if st.button("Hitung Solusi"):
 
         F = sp.Matrix([f1_sym, f2_sym])
         F_func = sp.lambdify((x, y), F, "numpy")
-        J_func = sp.lambdify((x, y), J, "numpy")
+        J_func = sp.lambdify((x, y), F, "numpy")
 
         xk, yk = x0, y0
 
-        # for i in range(int(max_iter)):
-        #     F_val = np.array(F_func(xk, yk), dtype=float).flatten()
-        #     J_val = np.array(J_func(xk, yk), dtype=float)
+        for i in range(int(max_iter)):
+            F_val = np.array(F_func(xk, yk), dtype=float).flatten()
+            J_val = np.array(J_func(xk, yk), dtype=float)
 
-        #     delta = np.linalg.solve(J_val, F_val)
+            delta = np.linalg.solve(J_val, F_val)
 
-        #     xk = xk - delta[0]
-        #     yk = yk - delta[1]
+            xk = xk - delta[0]
+            yk = yk - delta[1]
 
-        #     if np.linalg.norm(delta) < tol:
-        #         break
+            if np.linalg.norm(delta) < tol:
+                break
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
