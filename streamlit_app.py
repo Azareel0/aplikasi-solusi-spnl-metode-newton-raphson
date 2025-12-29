@@ -40,7 +40,9 @@ if st.button("Hitung Solusi"):
 
         for i in range(int(max_iter)):
             F_val = np.array(F_func(xk, yk), dtype=float).flatten()
-            J_val = np.array(J_func(xk, yk), dtype=float)
+            J_val = np.array(J_func(xk, yk), dtype=float
+
+            delta = np.linalg.solve(J_val, F_val)
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
