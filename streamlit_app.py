@@ -35,6 +35,9 @@ if st.button("Hitung Solusi"):
         F = sp.Matrix([f1_sym, f2_sym])
         F_func = sp.lambdify((x, y), F, "numpy")
         J_func = sp.lambdify((x, y), J, "numpy")
+
+        st.write("F(x0, y0) =", F_val)
+        st.write("J(x0, y0) =", J_val)
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
