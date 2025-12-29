@@ -27,6 +27,8 @@ if st.button("Hitung Solusi"):
         st.subheader("Persamaan yang Digunakan")
         st.write("f1 =", f1_sym)
         st.write("f2 =", f2_sym)
+
+        J = sp.Matrix([[sp.diff(f1_sym, x), sp.diff(f1_sym, y)], [sp.diff(f2_sym, x), sp.diff(f2_sym, y)]])
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
