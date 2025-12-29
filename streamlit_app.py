@@ -36,10 +36,9 @@ if st.button("Hitung Solusi"):
         F_func = sp.lambdify((x, y), F, "numpy")
         J_func = sp.lambdify((x, y), J, "numpy")
 
-        F_val = np.array(F_func(x0, y0), dtype=float).flatten()
-        J_val = np.array(J_func(x0, y0), dtype=float)
-        st.write("F(x0, y0) =", F_val)
-        st.write("J(x0, y0) =", J_val)
+        st.write(F)
+        st.write(F_func)
+        st.write(J_func)
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
