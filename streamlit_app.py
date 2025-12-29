@@ -56,7 +56,6 @@ if st.button("Hitung Solusi"):
         st.write(f"Jumlah iterasi: {i + 1}")
         st.write("x ≈ ", xk)
         st.write("y ≈ ", yk)
-        st.write("Error akhir = ", error)
 
         if i == int(max_iter) - 1:
             st.warning("Solusi belum konvergen dalam batas iterasi maksimum")
