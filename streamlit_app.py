@@ -31,6 +31,10 @@ if st.button("Hitung Solusi"):
         J = sp.Matrix([[sp.diff(f1_sym, x), sp.diff(f1_sym, y)], [sp.diff(f2_sym, x), sp.diff(f2_sym, y)]])
         st.subheader("Jacobian Matrix")
         st.write(J)
+
+        F = sp.Matrix([f1_sym, f2_sym])
+        F_func = sp.lambdify((x, y), F, "numpy")
+        J_func = sp.lambdify((x, y), J, "numpy")
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
