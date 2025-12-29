@@ -43,6 +43,8 @@ if st.button("Hitung Solusi"):
             J_val = np.array(J_func(xk, yk), dtype=float
 
             delta = np.linalg.solve(J_val, F_val)
+            xk = xk - delta[0]
+            yk = yk - delta[1]
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
