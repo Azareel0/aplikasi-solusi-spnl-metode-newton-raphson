@@ -36,9 +36,9 @@ if st.button("Hitung Solusi"):
         F_func = sp.lambdify((x, y), F, "numpy")
         J_func = sp.lambdify((x, y), J, "numpy")
 
-        st.write(F)
-        st.write(F_func)
-        st.write(J_func)
+        xk, yk = x0, y0
+
+        for i in range(int(max_iter)):
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
