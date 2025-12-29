@@ -49,6 +49,13 @@ if st.button("Hitung Solusi"):
 
             if np.linalg.norm(delta) < tol:
                 break
+
+        st.success("Solusi berhasil dihitung")
+
+        st.write(f"Jumlah iterasi: {i + 1}")
+        st.write("x ≈ ", xk)
+        st.write("y ≈ ", yk)
+        st.write("Error akhir = ", error)
     except:
         st.error("Terjadi kesalahan dalam perhitungan")
       
