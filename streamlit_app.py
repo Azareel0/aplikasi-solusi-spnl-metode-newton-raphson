@@ -47,7 +47,8 @@ if st.button("Hitung Solusi"):
             xk = xk - delta[0]
             yk = yk - delta[1]
 
-            if np.linalg.norm(delta) < tol:
+            error = np.linalg.norm(delta)
+            if error < tol:
                 break
 
         st.success("Solusi berhasil dihitung")
