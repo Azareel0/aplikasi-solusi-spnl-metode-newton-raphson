@@ -74,6 +74,11 @@ if st.button("Hitung Solusi"):
         st.write("x ≈ ", xk)
         st.write("y ≈ ", yk)
 
+        if len(iter_data) > 0:
+            st.subheader("Tabel Iterasi Newton-Raphson")
+            df = pd.DataFrame(iter_data)
+            st.dataframe(df)
+
         if i == int(max_iter) - 1:
             st.warning("Solusi belum konvergen dalam batas iterasi maksimum")
             
