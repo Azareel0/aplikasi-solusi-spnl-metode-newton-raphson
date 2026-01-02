@@ -42,6 +42,12 @@ if st.button("Hitung Solusi"):
             F_val = np.array(F_func(xk, yk), dtype=float).flatten()
             J_val = np.array(J_func(xk, yk), dtype=float)
 
+            detJ = np.linalg.det(J_val)
+            
+            if abs(detJ) < 1e-10:
+                st.error("Jacobian singular atau mendekati nol. Coba tebakan awal lain.")
+                break
+
             delta = np.linalg.solve(J_val, F_val)
 
             xk = xk - delta[0]
