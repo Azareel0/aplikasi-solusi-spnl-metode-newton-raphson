@@ -57,6 +57,14 @@ if st.button("Hitung Solusi"):
             yk = yk - delta[1]
 
             error = np.linalg.norm(delta)
+
+            iter_data.append({
+                "Iterasi": i + 1,
+                "x": xk,
+                "y": yk,
+                "Error": error
+            })
+            
             if error < tol:
                 break
 
