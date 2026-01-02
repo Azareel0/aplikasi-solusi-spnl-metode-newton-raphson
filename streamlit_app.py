@@ -39,6 +39,8 @@ if st.button("Hitung Solusi"):
 
         xk, yk = x0, y0
 
+        iter_data = []
+
         for i in range(int(max_iter)):
             F_val = np.array(F_func(xk, yk), dtype=float).flatten()
             J_val = np.array(J_func(xk, yk), dtype=float)
